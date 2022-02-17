@@ -3,6 +3,8 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
+import pandas as pd
+
 # chromedriver.exe 하고 브라우져하고 버전이 맞을것
 # WebDriver 객체생성
 wd = webdriver.Chrome('D:/web/chromedriver.exe')
@@ -40,3 +42,5 @@ for i in range(1,500):
         pass
 wd.close()
 
+df= pd.DataFrame(result, columns=('매장명','영업시간','주소','전화번호'))
+df.to_csv('D:/coffeeBean.csv',encoding='cp949',mode='w',index=True)
