@@ -41,7 +41,7 @@ temp = np.array([[1,2,3],[4,5,6]],dtype = np.int64)
 temp = np.array([[1,2,3],[4,5,6]],int)
 
 print(f"temp shape : {temp.shape}")
-temp = temp.reshape(-1,)
+temp = temp.reshape(-1)
 print(temp)
 print(temp.shape)
 
